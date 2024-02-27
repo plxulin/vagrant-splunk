@@ -10,7 +10,7 @@ sudo dpkg -i /vagrant/provision/lib/${SPLUNK_DEB}
 # accessing the splunk version from the passed in deb file
 SPLUNK_VER=$(echo $SPLUNK_DEB | grep -oP '[0-9]\.[0-9]\.[0-9]' | cut -d '.' -f 1)
 
-if the splunk version is 7 or greater
+# if the splunk version is 7 or greater
 if [[ $SPLUNK_VER -ge 7 ]] ; then
 
         # testing if the subversion of splunk is 7.1 or greater

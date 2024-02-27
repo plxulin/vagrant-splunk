@@ -11,17 +11,17 @@ VM_NAME = "splunk-sandbox"
 VM_MEMORY = 2048
 VM_CPUS = 2
 # Set to the .deb you're using, and place .deb in the provision/lib directory
-SPLUNK_DEB = "splunk-7.1.1-8f0ead9ec3db-linux-2.6-amd64.deb"
+SPLUNK_DEB = "splunk-9.2.0.1-d8ae995bf219-linux-2.6-amd64.deb"
 # provision/data/*.log are one-shot loaded to this index
 SPLUNK_INDEX = "metrics"
 # this is the password you will set for your splunk admin user
-SPLUNK_PASS  = "P@$$w0rd"
+SPLUNK_PASS  = "C!sc0123"
 # Splunk home directory
 SPLUNK_HOME  = "/opt/splunk"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "bento/ubuntu-20.04"
 
   config.vm.network "private_network", ip: "192.168.33.10"
   # You can use public_network, if you prefer:
