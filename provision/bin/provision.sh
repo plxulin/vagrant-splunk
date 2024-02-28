@@ -45,7 +45,7 @@ if [ -d "${DATA_DIR}" ]; then
     done
 fi
 
-IP=$(ifconfig enp0s8 | sed -ne 's/.*inet addr:\([0-9.]\+\) .*/\1/p')
+IP=$(ip addr show eth1 | awk '/inet / {print $2}' | cut -d '/' -f 1)
 
 cowsay <<MOO
 
